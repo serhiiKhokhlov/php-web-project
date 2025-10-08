@@ -1,0 +1,269 @@
+/* General body style to mimic the background and font */
+body {
+    font-family: 'Courier New', Courier ,monospace; /* As seen in OCR */
+    background: linear-gradient(to bottom, #137ff3, #d6f0ff); /* Light blue gradient */
+    min-height: 100vh;
+    color: #333; /* Default text color */
+}
+
+/* Container for the main content block (white rounded box) */
+.app-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center it and add some top/bottom margin */
+}
+
+/* Full height container for centering content vertically */
+.vh-100-flex {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button styling */
+.btn-faceblog {
+    background-color: #007bff; /* Blue from buttons */
+    color: white;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded buttons */
+    padding: 10px 20px;
+    border: none;
+}
+.btn-faceblog:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Stats items on the welcome page */
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.stat-label {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 15px;
+    flex-grow: 1;
+    margin-right: 10px;
+    text-align: left;
+}
+.stat-value {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 15px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Input field styling */
+.form-control-faceblog {
+    border-radius: 15px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    background-color: #f8f9fa; /* Light gray background for inputs */
+}
+.form-control-faceblog:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    background-color: white;
+}
+
+/* Titles with underline */
+.page-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Back button styling */
+.btn-back {
+    font-size: 1.5rem;
+    color: #007bff;
+    background: none;
+    border: none;
+}
+.btn-back:hover {
+    color: #0056b3;
+}
+
+/* Blog post card styling */
+.blog-card {
+    background-color: #f8f9fa; /* Light grey for cards */
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+.blog-card .card-title {
+    font-weight: bold;
+}
+.blog-card .card-meta {
+    font-size: 0.85rem;
+    color: #232628;
+}
+
+.blog-card .action-icon-delete .action-icon-svg,
+.blog-card .action-icon-like .action-icon-svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+.blog-card .action-icon-delete .action-icon-svg {
+    fill: #6c757d;
+}
+
+.blog-card .action-icon-delete:hover .action-icon-svg {
+    fill: #dc3545;
+}
+
+
+.blog-card .action-icon-like .heart-icon {
+}
+
+.blog-card .action-icon-like:hover .heart-icon {
+    opacity: 0.8;
+}
+
+
+.blog-card .action-icon-like.liked .heart-icon {
+}
+
+a.like-count-link,
+a.like-count-link:link,
+a.like-count-link:visited,
+a.like-count-link:active {
+    text-decoration: none !important; /* Remove underline always */
+    color: inherit !important;         /* Make the link color inherit from its parent (the .like-count span's color) */
+    /* Or set a specific color if you prefer, e.g., color: #333 !important; */
+    cursor: pointer;                   /* Ensure the pointer cursor still shows it's clickable */
+}
+
+/* Optional: Remove hover effect if you don't want any visual change on hover */
+a.like-count-link:hover {
+    text-decoration: none !important; /* Explicitly remove underline on hover too */
+    color: inherit !important;         /* Keep color the same on hover */
+    /* If you want a subtle hover effect, you could do something like: */
+    /* opacity: 0.8; */
+}
+
+.like-count {
+    margin-left: 4px; /* Space between heart and count */
+    line-height: 18px; /* Match with icon height for better vertical alignment */
+}
+
+
+
+
+.timestamp {
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    /*line-height: 56px; /* Vertically center icon */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.fab i {
+    font-size: 2rem; /* Explicitly size the icon if needed, or let .fab font-size handle it */
+    /* color: white; /* Already handled by .btn-faceblog if it sets color */
+}
+
+.btn-round-action {
+    width: 55px;  /* Or 50px, adjust to your preference */
+    height: 55px; /* Must be same as width */
+    border-radius: 50%; /* Ensures it's a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove any default button padding */
+    /* shadow-sm is already applied via Bootstrap class in HTML, which is good */
+}
+
+
+.btn-round-action i {
+    font-size: 1.6rem; /* Adjust this to make icon look good inside 55px button */
+    /* Original was fs-4 which is 1.5rem by default in Bootstrap */
+}
+
+.btn-light.btn-round-action i {
+    color: #495057; /* A dark grey, adjust if needed */
+}
+
+/* User list item styling */
+.user-list-item {
+    background-color: #e9ecef;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+.user-list-item .bi-person-fill {
+    font-size: 1.8rem;
+    color: #495057;
+}
+.user-list-item .user-since {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Offcanvas menu */
+.offcanvas-faceblog .list-group-item {
+    border: none;
+    font-size: 1.1rem;
+    padding: 12px 15px;
+}
+.offcanvas-faceblog .list-group-item:hover {
+    background-color: #e9ecef;
+}
+.offcanvas-faceblog .profile-info {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.offcanvas-faceblog .profile-info .bi-person-circle {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Top navigation bar for pages with menu */
+.app-header {
+    background-color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky; /* Make it sticky */
+    top: 0;
+    z-index: 1020; /* Below offcanvas but above content */
+}
+.app-header .page-title-header {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.app-header .btn-menu {
+    font-size: 1.8rem;
+    color: #007bff;
+}
